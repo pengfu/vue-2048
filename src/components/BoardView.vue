@@ -4,7 +4,6 @@
             <cell v-for="c_item in r_item"></cell>
         </div>
         <tile-view v-for="tile in tiles" :tile=tile>
-
         </tile-view>
         <game-end-overlay :board=board></game-end-overlay>
     </div>
@@ -20,11 +19,29 @@
               board:new Board()
           }
         },
+        ready(){
+            window.addEventListener('keydown', this.handleKeyDown.bind(this));
+        },
+        beforeDestroy(){
+            window.removeEventListener('keydown', this.handleKeyDown.bind(this));
+        },
         computed:{
           tiles(){
               return this.board.tiles
                       .filter(tile => tile.value != 0)
           }
+        },
+        methods:{
+            handleKeyDown(event){
+                if (this.board.hasWon()) {
+                    return;
+                }
+                if (event.keyCode >= 37 && event.keyCode <= 40) {
+                    event.preventDefault();
+                    var direction = event.keyCode - 37;
+                    this.board.move(direction)
+                }
+            }
         },
         components: {
             Cell,

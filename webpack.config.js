@@ -54,4 +54,5 @@ module.exports = {
   resolve: {
     extensions: ['', '.js', '.json', '.scss','.less', '.css', '.vue']
   },
+  devtool: 'source-map',
 }
