@@ -1,7 +1,7 @@
 <template>
     <div class="board"  tabIndex="1">
 
-       <GameEndOverlay></GameEndOverlay>
+       <game-end-overlay></game-end-overlay>
     </div>
 </template>
 

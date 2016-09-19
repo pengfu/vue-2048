@@ -26,6 +26,12 @@ module.exports = {
       test: /\.css$/,
       include: /node_modules/,
       loader: 'style!css'
+    },{
+      test: /\.(png|jpe?g|gif)$/,
+      loader: 'url?limit=1024'
+    },{
+      test: /\.(svg|woff2?|eot|ttf|otf)(\?.*)?$/,
+      loader: 'url?limit=10240'
     }]
   },
   babel: {
@@ -44,5 +50,8 @@ module.exports = {
       less:'vue-style!css!postcss!less',
       scss:'vue-style!css!postcss!sass'
     }
+  },
+  resolve: {
+    extensions: ['', '.js', '.json', '.scss','.less', '.css', '.vue']
   },
 }
