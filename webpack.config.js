@@ -1,3 +1,4 @@
+var path = require('path')
 module.exports = {
   entry: './main.js',
   output: {
@@ -15,7 +16,7 @@ module.exports = {
       loader: 'babel'
     },{
       test: /\.scss$/,
-
+      include:[path.join(__dirname,'src/assets/scss')],
       loader: "style!css!postcss!sass"
     },{
       test: /\.css$/,

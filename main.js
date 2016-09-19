@@ -1,7 +1,9 @@
+// import './src/assets/scss/style.scss'
+// import './src/assets/scss/main.scss'
 import Vue from 'vue'
-import App from './components/App.vue'
+import BoardView from './src/components/BoardView.vue'
 
 new Vue({
-  el: 'body',
-  components: { App }
+  el: '#boardDiv',
+  components: { BoardView }
 })
