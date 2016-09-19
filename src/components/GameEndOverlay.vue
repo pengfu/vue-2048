@@ -1,5 +1,5 @@
 <template>
-    <div class="overlay">
+    <div class="overlay" v-show="show">
         <p class="message">{{contents}}</p>
         <button class="tryAgain" @click="onRestart"  >Try again</button>
     </div>
@@ -10,7 +10,27 @@
     export default{
         data(){
             return{
-                contents:'hello vue'
+
+            }
+        },
+        props:{
+            board:{
+                type:Object,
+                required:true
+            }
+        },
+        computed:{
+            show(){
+                return this.board.hasWon() || this.board.hasLost()
+            },
+            contents(){
+                if(this.board.hasWon()){
+                    return 'Good Job!'
+                }else if(this.board.hasLost()){
+                    return 'Game Over'
+                }else {
+                    return ''
+                }
             }
         },
 
