@@ -3,9 +3,9 @@
         <div v-for="r_item in board.cells">
             <cell v-for="c_item in r_item"></cell>
         </div>
-        <tile-view v-for="tile in tiles" :tile=tile>
+        <tile-view v-for="tile in tiles" :tile="tile">
         </tile-view>
-        <game-end-overlay :board=board></game-end-overlay>
+        <game-end-overlay :board="board" :onrestart="onRestart"></game-end-overlay>
     </div>
 </template>
 
@@ -41,6 +41,9 @@
                     var direction = event.keyCode - 37;
                     this.board.move(direction)
                 }
+            },
+            onRestart(){
+                this.board = new Board()
             }
         },
         components: {

@@ -1,7 +1,7 @@
 <template>
     <div class="overlay" v-show="show">
         <p class="message">{{contents}}</p>
-        <button class="tryAgain" @click="onRestart"  >Try again</button>
+        <button class="tryAgain" @click="restart" >Try again</button>
     </div>
 </template>
 
@@ -16,6 +16,10 @@
         props:{
             board:{
                 type:Object,
+                required:true
+            },
+            onrestart:{
+                type:Function,
                 required:true
             }
         },
@@ -35,8 +39,8 @@
         },
 
         methods:{
-            onRestart(){
-
+            restart(){
+                this.onrestart && this.onrestart()
             }
         },
         components:{
