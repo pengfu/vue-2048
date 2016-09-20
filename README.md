@@ -1,4 +1,4 @@
-2048-react
+vue-2048
 ==========
 
 This is a clone of [2048-react](https://github.com/IvanVergiliev/2048-react).What I do is re-implementing it using [Vue](https://cn.vuejs.org/),[Webpack](https://webpack.github.io/)
