@@ -1,7 +1,7 @@
 vue-2048
 ==========
 
-This is a clone of [2048-react](https://github.com/IvanVergiliev/2048-react).What I do is re-implementing it using [Vue](https://cn.vuejs.org/),[Webpack](https://webpack.github.io/)
+This is a clone of [2048-react](https://github.com/IvanVergiliev/2048-react).What I do is re-implementing it using [Vue 2](https://cn.vuejs.org/),[Webpack](https://webpack.github.io/)
 and [SASS](http://sass-lang.com/).
 **Here is the [living demo](https://pengfu.github.io/vue-2048/)**
 
