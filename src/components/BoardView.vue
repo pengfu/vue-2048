@@ -13,13 +13,14 @@
     import Cell from './Cell.vue'
     import TileView from './TileView.vue'
     import GameEndOverlay from './GameEndOverlay.vue'
+    import {Board} from '../board'
     export default {
         data(){
           return {
               board:new Board()
           }
         },
-        ready(){
+        mounted(){
             window.addEventListener('keydown', this.handleKeyDown.bind(this));
         },
         beforeDestroy(){

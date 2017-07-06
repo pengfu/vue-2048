@@ -1,5 +1,5 @@
 <template>
-    <span class={{classes}}>{{tile.value}}</span>
+    <span :class="classes">{{tile.value}}</span>
 </template>
 
 <script>
