@@ -1,0 +1,12 @@
+language: node_js
+node_js:
+  - "stable"
+install:
+  - npm install
+script:
+  - npm run build
+after_success:
+  - bash deploy.sh
+env:
+  global:
+    - secure: "TrvkZwqR91b/eCVuDBMyPB4tPBWsfXxs6iLI35EAizH7O4pGG9xYd9wZjUb2rfFtRSbn1VoPoEH2nWgXKkdxizmNIjwaZ5vITPd8xzrxmQBDt0P/l19BMC2fc386khz6pSvW/mjsp4MCdaiuqIsnWBhKbojkJs13xmgkRf1lsFyHC4Uu72S3ZWnrWFRYlXN2IqOsn7q/x+EDC46Rk17bCgLMnoHJubnNbVnPZoKlyBz45l4mRlbbz9TKqGUqOTOvfpgUYFFzc9noGKTxl+bKDDN8BeQoVG9vegVJUVOQhbT/PBm9LyiVLMsTlQQNsu15iqiCAXjw8nBbO50GJrCfqc/SuM9DoPMSHVVcg7Nz5wixqoUcYoJqHdDmMSP+cPsxQNvrwsOb/k5FUdosC2RU8uhcVD0AgEIFRXWyztDc4a1Y/qGYFo/cRYce/yvYNAf+yPo9HW2ebRFlDdhg9hcOFHtaHuQimJk26XF/Bl1vVTB1KffMvvE9tn4aF28eSYonTPHMNFkr3/xRgDkVxFPhHeVNi/nE7jFHKFP/yo1f8FGLjxbr+Fjw9Y/oROFEpWiC1vq2ur1MljE1Ese63Mr1rdpbhQtIIbtegIHVE+YN7mo1H/E1Y4qply7GxdbCMrLynGgCoOHWXPZd5BkNgueTddpEuth0qkh03P7AFnGtqes="
