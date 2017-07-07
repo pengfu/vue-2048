@@ -1,6 +1,8 @@
 language: node_js
 node_js:
   - "stable"
+before_install:
+  - npm cache verify
 install:
   - npm install
 script:
