@@ -22,6 +22,8 @@ echo "pengfoo@126.com" > CNAME
 
 touch .
 
+cp -r dist/*.* ./
+
 git add -A .
 git commit -m "rebuild pages at ${rev}"
 git push -q upstream HEAD:gh-pages
