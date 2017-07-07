@@ -2,7 +2,7 @@ language: node_js
 node_js:
   - "stable"
 before_install:
-  - npm cache verify
+  - npm cache clean --force
 install:
   - npm install
 script:
