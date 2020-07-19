@@ -1,25 +1,25 @@
 vue-2048
 ==========
 
-This is a clone of [2048-react](https://github.com/IvanVergiliev/2048-react).What I do is re-implementing it using [Vue 2](https://cn.vuejs.org/),[Webpack](https://webpack.github.io/)
+This is a clone of [2048-react](https://github.com/IvanVergiliev/2048-react).What I do is re-implementing it using [Vue 3.x](https://cn.vuejs.org/),[Vite](https://github.com/vitejs/vite/)
 and [SASS](http://sass-lang.com/).
 **Here is the [living demo](https://pengfu.github.io/vue-2048/)**
 
 ### Install the dependencies
 
 ```bash
-npm install
+yarn
 ```
 
 ### Run the dev server with hot reload at localhost:8080
 
 ```bash
-npm run dev
+yarn dev
 ```
 
 ### Build the app for production
 
 ```bash
-npm run build
+yarn build
 ```
 
