@@ -3,41 +3,46 @@
 </template>
 
 <script>
+import { toRefs, ref, computed } from "vue";
 export default {
-  data() {
-    return {};
-  },
   props: {
     tile: {
       type: Object,
       required: true,
     },
   },
-  computed: {
-    classes() {
-      var tile = this.tile;
+  setup(props) {
+    const { tile } = toRefs(props);
+    const classes = computed(() => {
       var classArray = ["tile"];
-      classArray.push("tile" + this.tile.value);
-      if (!tile.mergedInto) {
-        classArray.push("position_" + tile.row + "_" + tile.column);
+      classArray.push("tile" + tile.value.value);
+      if (!tile.value.mergedInto) {
+        classArray.push("position_" + tile.value.row + "_" + tile.value.column);
       }
-      if (tile.mergedInto) {
+      if (tile.value.mergedInto) {
         classArray.push("merged");
       }
-      if (tile.isNew()) {
+      if (tile.value.isNew()) {
         classArray.push("new");
       }
-      if (tile.hasMoved()) {
-        classArray.push("row_from_" + tile.fromRow() + "_to_" + tile.toRow());
+      if (tile.value.hasMoved()) {
         classArray.push(
-          "column_from_" + tile.fromColumn() + "_to_" + tile.toColumn()
+          "row_from_" + tile.value.fromRow() + "_to_" + tile.value.toRow()
+        );
+        classArray.push(
+          "column_from_" +
+            tile.value.fromColumn() +
+            "_to_" +
+            tile.value.toColumn()
         );
         classArray.push("isMoving");
       }
 
       return classArray.join(" ");
-    },
+    });
+    return {
+      classes,
+    };
   },
-  components: {},
 };
 </script>

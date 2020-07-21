@@ -4,10 +4,8 @@
 
 <script>
 export default {
-  data() {
-    return {
-      msg: "hello vue",
-    };
+  setup() {
+    return {}
   },
   components: {},
 };
