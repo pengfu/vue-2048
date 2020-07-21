@@ -13,37 +13,37 @@ import Cell from "./Cell.vue";
 import TileView from "./TileView.vue";
 import GameEndOverlay from "./GameEndOverlay.vue";
 import { Board } from "../board";
+import { onMounted, onBeforeUnmount, ref, computed } from "vue";
 export default {
-  data() {
-    return {
-      board: new Board(),
-    };
-  },
-  mounted() {
-    window.addEventListener("keydown", this.handleKeyDown.bind(this));
-  },
-  beforeUnmount() {
-    window.removeEventListener("keydown", this.handleKeyDown.bind(this));
-  },
-  computed: {
-    tiles() {
-      return this.board.tiles.filter((tile) => tile.value != 0);
-    },
-  },
-  methods: {
-    handleKeyDown(event) {
-      if (this.board.hasWon()) {
+  setup() {
+    const board = ref(new Board());
+    const handleKeyDown = (event) => {
+      if (board.value.hasWon()) {
         return;
       }
       if (event.keyCode >= 37 && event.keyCode <= 40) {
         event.preventDefault();
         var direction = event.keyCode - 37;
-        this.board.move(direction);
+        board.value.move(direction);
       }
-    },
-    onRestart() {
-      this.board = new Board();
-    },
+    };
+    const onRestart = () => {
+      board.value = new Board();
+    };
+    onMounted(() => {
+      window.addEventListener("keydown", handleKeyDown);
+    });
+    onBeforeUnmount(() => {
+      window.removeEventListener("keydown", handleKeyDown);
+    });
+    const tiles = computed(() => {
+      return board.value.tiles.filter((tile) => tile.value != 0);
+    });
+    return {
+      board,
+      onRestart,
+      tiles,
+    };
   },
   components: {
     Cell,

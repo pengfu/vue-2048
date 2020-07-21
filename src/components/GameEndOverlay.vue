@@ -6,10 +6,8 @@
 </template>
 
 <script>
+import { toRefs, ref, computed } from "vue";
 export default {
-  data() {
-    return {};
-  },
   props: {
     board: {
       type: Object,
@@ -20,26 +18,28 @@ export default {
       required: true,
     },
   },
-  computed: {
-    show() {
-      return this.board.hasWon() || this.board.hasLost();
-    },
-    contents() {
-      if (this.board.hasWon()) {
+  setup(props) {
+    const { board } = toRefs(props);
+    const show = computed(() => {
+      return board.value.hasWon() || board.value.hasLost();
+    });
+    const contents = computed(() => {
+      if (board.value.hasWon()) {
         return "Good Job!";
-      } else if (this.board.hasLost()) {
+      } else if (board.value.hasLost()) {
         return "Game Over";
       } else {
         return "";
       }
-    },
+    });
+    const restart = () => {
+      props.onrestart && props.onrestart();
+    }
+    return {
+      show,
+      contents,
+      restart
+    }
   },
-
-  methods: {
-    restart() {
-      this.onrestart && this.onrestart();
-    },
-  },
-  components: {},
 };
 </script>
