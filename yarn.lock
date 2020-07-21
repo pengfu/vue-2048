@@ -260,7 +260,7 @@
     "@vue/compiler-core" "3.0.0-rc.1"
     "@vue/shared" "3.0.0-rc.1"
 
-"@vue/compiler-sfc@^3.0.0-beta.15", "@vue/compiler-sfc@^3.0.0-rc.1":
+"@vue/compiler-sfc@^3.0.0-rc.1":
   version "3.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/@vue/compiler-sfc/-/compiler-sfc-3.0.0-rc.1.tgz#a46d50cdab1993c7b8674604086fe1c75e161586"
   integrity sha512-DmP9MfmCOvSg8rc55Dhhiop659Q+swlhvmiym/i8qyHQiFgvcdSbxSL1WfECywngep8bD1ABEuG8nuRLGp0R8A==
@@ -2016,7 +2016,7 @@ vary@^1.1.2:
   resolved "https://registry.yarnpkg.com/vary/-/vary-1.1.2.tgz#2299f02c6ded30d4a5961b0b9f74524a18f634fc"
   integrity sha1-IpnwLG3tMNSllhsLn3RSShj2NPw=
 
-vite@^1.0.0-beta.11:
+vite@^1.0.0-rc.1:
   version "1.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/vite/-/vite-1.0.0-rc.1.tgz#073cef87d7f335dad7b13dd69506ca23129e55b4"
   integrity sha512-CpJN3C2uhY6xcISlHIs9lJCnIe40/WGat8B0X60h1PVR/tcD+Ef8Iv/G/oxK31Qm4xFzjJ9m6mr4pOUVfH4nUA==
@@ -2071,7 +2071,7 @@ vite@^1.0.0-beta.11:
     vue "^3.0.0-rc.1"
     ws "^7.2.3"
 
-vue@^3.0.0-beta.22, vue@^3.0.0-rc.1:
+vue@^3.0.0-rc.1:
   version "3.0.0-rc.1"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.0.0-rc.1.tgz#50a3ed8676031732ba19e514b525e163e6671432"
   integrity sha512-AvliCsYc5tKVYgnXZ8oN6Q2HhQ7rWp+7FcTUXoAHJY+dL+j1AzgSKeO1YIWlw8j/inOdCKFVv+ZsGrsJbNtg/Q==

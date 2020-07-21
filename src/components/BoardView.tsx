@@ -6,10 +6,14 @@ import GameEndOverlay from "./GameEndOverlay.vue";
 import { Board } from "../board";
 
 export default defineComponent({
+  name: 'BoardView',
   setup() {
+    // onMounted(() => {
+    //   console.log('onMounted-------------------------');
+    //   window.addEventListener("keydown", handleKeyDown);
+    // })
     onMounted(() => {
-      console.log('onMounted-------------------------');
-      window.addEventListener("keydown", handleKeyDown);
+      console.log('--------onMounted');
     });
 
     onBeforeUnmount(() => {
@@ -61,9 +65,5 @@ export default defineComponent({
       </div >
     );
   },
-
-  // mounted() {
-  //   console.log('onMounted-------------------------');
-  //   window.addEventListener("keydown", handleKeyDown);  }
 });
 
