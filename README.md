@@ -11,7 +11,7 @@ and [SASS](http://sass-lang.com/).
 yarn
 ```
 
-### Run the dev server with hot reload at localhost:8080
+### Run the dev server with hot reload at localhost:3000
 
 ```bash
 yarn dev
