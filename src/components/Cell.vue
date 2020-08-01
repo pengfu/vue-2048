@@ -2,7 +2,7 @@
   <span class="cell">{{ "" }}</span>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   setup() {
     return {}

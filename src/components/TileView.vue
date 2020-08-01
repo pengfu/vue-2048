@@ -2,7 +2,7 @@
   <span :class="classes">{{ tile.value }}</span>
 </template>
 
-<script>
+<script lang="ts">
 import { toRefs, ref, computed } from "vue";
 export default {
   props: {

@@ -7,16 +7,25 @@
   "scripts": {
     "clean": "rimraf dist",
     "dev": "vite",
-    "build": "yarn clean && vite build"
+    "build": "yarn clean && vite build",
+    "esl": "eslint --init"
   },
   "dependencies": {
     "vue": "^3.0.0-rc.1"
   },
   "devDependencies": {
+    "@typescript-eslint/eslint-plugin": "^3.7.1",
+    "@typescript-eslint/parser": "^3.7.1",
     "@vue/compiler-sfc": "^3.0.0-rc.1",
     "autoprefixer": "^9.8.5",
+    "eslint": "^7.6.0",
+    "eslint-config-prettier": "^6.11.0",
+    "eslint-plugin-prettier": "^3.1.4",
+    "eslint-plugin-vue": "^6.2.2",
+    "prettier": "^2.0.5",
     "rimraf": "^3.0.2",
     "sass": "^1.26.10",
+    "typescript": "^3.9.7",
     "vite": "^1.0.0-rc.1"
   },
   "browserslist": [

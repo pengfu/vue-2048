@@ -5,7 +5,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import { toRefs, ref, computed } from "vue";
 export default {
   props: {

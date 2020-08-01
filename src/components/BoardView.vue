@@ -8,7 +8,7 @@
   </div>
 </template>
 
-<script>
+<script lang="ts">
 import Cell from "./Cell.vue";
 import TileView from "./TileView.vue";
 import GameEndOverlay from "./GameEndOverlay.vue";
