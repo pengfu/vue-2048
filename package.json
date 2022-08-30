@@ -17,7 +17,7 @@
     "autoprefixer": "^9.8.5",
     "rimraf": "^3.0.2",
     "sass": "^1.26.10",
-    "vite": "^1.0.0-rc.1"
+    "vite": "^2.9.13"
   },
   "browserslist": [
     "> 1%",
